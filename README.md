@@ -1,4 +1,4 @@
-# Drosera Node Kurulum Rehberi (SystemD, Docker'sız)
+# Drosera Node Kurulum Rehberi (SystemD)
 
 Bu rehber, sistem gereksinimi düşük olan @DroseraNetwork node'unu kolayca kurabilmeniz için hazırlanmıştır. Boşta duran VPS’lerinizde veya ücretsiz sunucularda çalıştırabilirsiniz.
 
