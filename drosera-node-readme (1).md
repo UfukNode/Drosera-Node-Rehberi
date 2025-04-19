@@ -25,7 +25,7 @@ Bu rehber, sistem gereksinimi düşük olan @DroseraNetwork node'unu kolayca kur
 - Yeni bir MetaMask cüzdanı oluşturun.
 - Bu cüzdana Holesky ETH yükleyin.
 
-Faucet bağlantısı: https://www.alchemy.com/faucets
+📌 Faucet bağlantısı: https://www.alchemy.com/faucets
 
 ## 1- Sunucuya Bağlanma
 
