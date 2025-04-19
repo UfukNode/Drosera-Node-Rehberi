@@ -201,7 +201,7 @@ sudo systemctl restart drosera
 - [Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.](https://app.drosera.io adresine girerek node’unuzun yeşil bloklar ürettiğini görebilirsiniz.
 Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.)
 
-### ✅ "CTRL + C" yaparak sunucudan çıkış yapabilirsiniz. Node’unuz arka planda çalışmaya devam edecektir.
+- ✅ "CTRL + C" yaparak sunucudan çıkış yapabilirsiniz. Node’unuz arka planda çalışmaya devam edecektir.
 
 ---
 
