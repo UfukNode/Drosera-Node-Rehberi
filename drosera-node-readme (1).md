@@ -203,7 +203,7 @@ sudo systemctl restart drosera
 Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.)
 
 - ✅ "CTRL + C" yaparak sunucudan çıkış yapabilirsiniz. Node’unuz arka planda çalışmaya devam edecektir.
-![Go16e2MXYAAL2QX](https://github.com/user-attachments/assets/b0b94926-b801-4685-8a4f-c6f99d90c58d)
+![Trap ve Node Kontrol](./optin-check-node-status.png)
 
 ---
 
