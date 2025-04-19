@@ -58,7 +58,7 @@ curl -fsSL https://bun.sh/install | bash
 source /root/.bashrc
 ```
 
-## 4- Trap (Tuzak) Oluşturma
+## 4- Trap Oluşturma
 
 ```bash
 mkdir my-drosera-trap && cd my-drosera-trap
