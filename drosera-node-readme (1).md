@@ -98,6 +98,7 @@ DROSERA_PRIVATE_KEY=kendi-privatekey drosera apply
 - Cüzdanınızı bağlayın
 - "Traps Owned" sekmesinden trap'e tıklayın
 - "Send Bloom Boost" butonuna basın ve bir miktar Holesky ETH yatırın
+- 
 ![image](https://github.com/user-attachments/assets/08d6f494-6b1e-47c7-aad7-f922fd48ea94)
 
 ## 8- Whitelist Ayarı
@@ -133,6 +134,8 @@ drosera-operator --version
 1. https://dashboard.alchemy.com adresine git
 2. Ethereum → Holesky ağı için bir uygulama oluştur
 3. Uygulama sayfasından özel RPC linkini kopyala
+
+![image](https://github.com/user-attachments/assets/759b1853-45d8-4f02-aace-c4fe812fc72b)
 
 ## 11- Portları Aç:
 
