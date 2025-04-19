@@ -112,7 +112,8 @@ nano drosera.toml
 private_trap = true
 whitelist = ["0xSeninPublicCuzdanAdresin"]
 ```
-⚠ Fazladan private ve whitelist'i silin.
+⚠ Fazladan private ve whitelist'i silin. Örnekteki gibi olmalı.
+![image](https://github.com/user-attachments/assets/1e83c016-12a3-48b5-b6d4-082e7ca695a7)
 
 ```bash
 DROSERA_PRIVATE_KEY=kendi-privatekeyin drosera apply
