@@ -53,6 +53,8 @@ foundryup
 ```
 ```bash
 curl -fsSL https://bun.sh/install | bash
+```
+```bash
 source /root/.bashrc
 ```
 
@@ -60,6 +62,8 @@ source /root/.bashrc
 
 ```bash
 mkdir my-drosera-trap && cd my-drosera-trap
+```
+```bash
 git config --global user.email "mail-adresini-gir"
 git config --global user.name "github-kullanici-adi"
 ```
@@ -70,17 +74,19 @@ git config --global user.name "github-kullanici-adi"
 
 ```bash
 forge init -t drosera-network/trap-foundry-template
+```
+```bash
+curl -fsSL https://bun.sh/install | bash
 bun install
+```
+```bash
 forge build
 ```
 
 ## 6- Deploy Etme
 
 ```bash
-DROSERA_PRIVATE_KEY="kendi-privatekey"
-```
-```bash
-drosera apply
+DROSERA_PRIVATE_KEY=kendi-privatekey drosera apply
 ```
 - Yukarıdaki "kendi-privatekey" kısmına Holesky ETH bulunan MetaMask cüzdanınızın private key’ini girin.
 - Deploy sırasında sizden onay istenirse ofc yazıp Enter'a basın.
@@ -103,18 +109,19 @@ nano drosera.toml
 private_trap = true
 whitelist = ["0xSeninPublicCuzdanAdresin"]
 ```
+⚠ Fazladan private ve whitelist'i silin.
 
 ```bash
-DROSERA_PRIVATE_KEY=senin_privatekeyin drosera apply
+DROSERA_PRIVATE_KEY=kendi-privatekeyin drosera apply
 ```
-- Yukarıdaki "kendi-privatekey" kısmına Holesky ETH bulunan MetaMask cüzdanınızın private key’ini girin.
+- Yukarıdaki "kendi-privatekeyin" kısmına Holesky ETH bulunan MetaMask cüzdanınızın private key’ini girin.
 
 ## 9- Operatör CLI Kurulumu
 
 ```bash
 cd ~
 curl -LO https://github.com/drosera-network/releases/releases/download/v1.16.2/drosera-operator-v1.16.2-x86_64-unknown-linux-gnu.tar.gz
-tar -xvf drosera-operator-*.tar.gz
+tar -xvf drosera-operator-v1.16.2-x86_64-unknown-linux-gnu.tar.gz
 sudo cp drosera-operator /usr/bin
 drosera-operator --version
 ```
@@ -125,7 +132,17 @@ drosera-operator --version
 2. Ethereum → Holesky ağı için bir uygulama oluştur
 3. Uygulama sayfasından özel RPC linkini kopyala
 
-## 11- SystemD Servisi Oluşturma
+## 11- Portları Aç:
+
+```bash
+sudo ufw allow ssh && \
+sudo ufw allow 22 && \
+sudo ufw allow 31313/tcp && \
+sudo ufw allow 31314/tcp && \
+sudo ufw --force enable
+```
+
+## 12- SystemD Servisi Oluşturma
 
 ```bash
 sudo tee /etc/systemd/system/drosera.service > /dev/null <<EOF
@@ -148,23 +165,43 @@ EOF
 - "VPS_IP_Adresin" kısmına VPS sunucunuzun IP adresini girin.
 - "Oluşturduğun_RPC" kısmına Alchemy'den aldığınız özel Holesky RPC adresini girin.
 
-## 12- Node'u Başlatma ve Kontrol Etme
+## 13- Node'u Başlatma ve Kontrol Etme
 
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable drosera
+```
+```bash
 sudo systemctl start drosera
-sudo systemctl status drosera
+```
+```bash
 journalctl -u drosera.service -f
 ```
 
 ## ✅ Aşağıdaki gibi loglar almaya başladıysanız, kurulumunuzu başarılı bir şekilde tamamladınız demektir,
 ![Ekran görüntüsü 2025-04-18 201619](https://github.com/user-attachments/assets/5d9b6c89-a2ca-49c8-bdf4-f91e77368dfa)
 
-## Çalışırlığı Doğrulama
+## 14- Opt in Tx:
 
-1. Trap sayfasından "Opt-in" butonuna tıklayın
-2. Operator Status yeşil olmalı
+- https://app.drosera.io adresine git.
+- "Traps Owned"a git ve deploy ettiğin trap'e tıkla.
+- "Opt in" tuşuna bas ve cüzdanından gelen onaylamaları tamamla.
+
+## Sağlıklı Bloklar İçin Durdur ve Tekrar Başlat:
+
+```bash
+# Node'u Durdur
+sudo systemctl stop drosera
+```
+```bash
+# Tekrar Başlat
+sudo systemctl restart drosera
+```
+
+- [Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.](https://app.drosera.io adresine girerek node’unuzun yeşil bloklar ürettiğini görebilirsiniz.
+Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.)
+
+# ✅ "CTRL + C" yaparak sunucudan çıkış yapabilirsiniz. Node’unuz arka planda çalışmaya devam edecektir.
 
 ---
 
