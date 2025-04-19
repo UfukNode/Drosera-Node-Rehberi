@@ -98,7 +98,7 @@ DROSERA_PRIVATE_KEY=kendi-privatekey drosera apply
 - Cüzdanınızı bağlayın
 - "Traps Owned" sekmesinden trap'e tıklayın
 - "Send Bloom Boost" butonuna basın ve bir miktar Holesky ETH yatırın
-![Go18DkSXcAAa67o](https://github.com/user-attachments/assets/4c02de4c-2307-4367-8ca6-5c7412a16c73)
+![image](https://github.com/user-attachments/assets/08d6f494-6b1e-47c7-aad7-f922fd48ea94)
 
 ## 8- Whitelist Ayarı
 
