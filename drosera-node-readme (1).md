@@ -47,7 +47,8 @@ source /root/.bashrc
 droseraup
 ```
 ```bash
-curl -L https://foundry.paradigm.xyz | bash
+curl -L https://foundry.paradigm.xyz | bash![Go18yj6WMAAHvfj](https://github.com/user-attachments/assets/11009cc2-4d78-46ec-b8d2-6f3d0caaf0c1)
+
 source /root/.bashrc
 foundryup
 ```
@@ -202,6 +203,7 @@ sudo systemctl restart drosera
 Bu sayede node’unuzun çalışıp çalışmadığını kolaylıkla kontrol edebilirsiniz.)
 
 - ✅ "CTRL + C" yaparak sunucudan çıkış yapabilirsiniz. Node’unuz arka planda çalışmaya devam edecektir.
+![Go18yj6WMAAHvfj](https://github.com/user-attachments/assets/68a04938-7827-4c7f-b3fc-172036c243d1)
 
 ---
 
