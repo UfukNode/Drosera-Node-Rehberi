@@ -6,7 +6,6 @@ Bu rehber, sistem gereksinimi düşük olan @DroseraNetwork node'unu kolayca kur
 
 | Gereksinim              | Detaylar                                 |
 |------------------------|------------------------------------------|
-| CPU Mimarisi           | amd64 veya arm64                         |
 | RAM                    | En az 4 GB RAM                          |
 | Depolama               | En az 20 GB SSD                         |
 | İşletim Sistemi        | Ubuntu 20.04 veya üzeri                 |
